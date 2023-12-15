@@ -1,0 +1,9 @@
+<div class="notification-modal" *ngIf="isNotificationModalVisible">
+  <div *ngFor="let notification of notifications" class="alert alert-{{notification.severity}} alert-dismissible fade show" role="alert">
+    <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
+    <span class="alert-inner--text"><strong>{{notification.summary}}</strong> {{notification.detail}}</span>
+    <button type="button" class="close" aria-label="Close" (click)="removeNotification(notification)">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>

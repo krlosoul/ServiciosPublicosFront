@@ -1,0 +1,37 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row">
+        <div class="col-xl-8 col-md-12 col-lg-7 pb-4">
+          <h1 class="text-white">Visor de reportes</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-lg-6 mx-auto">
+          <app-search
+            [services]="serviceDto"
+            [statuses]="statusDto"
+            [users]="userDto"
+            (searchEvent)="handleSearch($event)"
+          ></app-search>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Body-->
+<div class="container-fluid mt--7">
+  <div class="row">
+    <div class="col-xl-12 order-xl-1">
+      <div class="card bg-secondary shadow">
+        <app-grid
+        [gridName]="'Reporte de daños'"
+        [customHeaders]="customHeaders"
+        [columnData]="reportDto"
+        [totalRecords]="reportDto.length"
+        [hiddenColumns]="hideColumns"
+        ></app-grid>
+      </div>
+    </div>
+  </div>
+</div>

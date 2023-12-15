@@ -1,0 +1,22 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row">
+        <div class="col-xl-8 col-md-12 col-lg-7 pb-4">
+          <h1 class="text-white">Bienvenido: <span>{{token.UserName}}</span></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-8 col-md-12 col-lg-7 pb-4">
+          <h4 class="text-white">En este módulo para reporte de daños, podrás realizar:</h4>
+          <ul class="text-white">
+            <li [roles]="[rolesEnum.Viewer]">Ver el historial de daños reportados y realizar busquedas.</li>
+            <li [roles]="[rolesEnum.Administrator,rolesEnum.Editor]">Registrar un reporte de daño.</li>
+            <li [roles]="[rolesEnum.Administrator,rolesEnum.Editor]">Editar un reporte de daño.</li>
+            <li [roles]="[rolesEnum.Administrator]">Eliminar un reporte de daño.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

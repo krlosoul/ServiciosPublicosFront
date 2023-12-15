@@ -1,0 +1,53 @@
+<nav class="navbar navbar-vertical navbar-expand-md navbar-light bg-white" id="sidenav-main">
+  <div class="container-fluid">
+    <!-- Toggler -->
+    <button type="button" class="navbar-toggler"  (click)="isCollapsed=!isCollapsed">
+      <i class="fas fa-bars"></i>
+    </button>
+    <!-- Brand -->
+    <a class="navbar-brand pt-0" routerLinkActive="active">
+      <img src="./assets/img/brand/favicon.png" class="navbar-brand-img" alt="...">
+    </a>
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse"  [ngbCollapse]="isCollapsed" id="sidenav-collapse-main">
+      <!-- Collapse header -->
+      <div class="navbar-collapse-header d-md-none">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a  routerLinkActive="active" [routerLink]="['/admin/dashboard']">
+              <img src="./assets/img/brand/favicon.png">
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button type="button" class="navbar-toggler" (click)="isCollapsed=!isCollapsed">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation -->
+      <ul class="navbar-nav">
+        <ng-container *ngFor="let menuItem of menuItems; let i = index">
+          <li [ngClass]="{'open': menuItem.isOpen}">
+            <a (click)="toggleMenu(i)" class="nav-link">
+              <div class="menu-title">
+                <i [class]="menuItem.icon"></i>
+                {{ menuItem.title }}
+              </div>
+              <i *ngIf="menuItem.submenus" class="sub-menu-icon" [class]="menuItem.isOpen ? 'ni ni-bold-up' : 'ni ni-bold-down'"></i>
+            </a>
+            <ul class="sub-menu" *ngIf="menuItem.submenus && menuItem.isOpen">
+              <li *ngFor="let submenu of menuItem.submenus">
+                <a routerLinkActive="active" [routerLink]="[submenu.path]" class="nav-link">
+                  <i [class]="submenu.icon"></i>
+                  {{ submenu.title }}
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</nav>
