@@ -1,7 +1,3 @@
-<p>Back:</p>
-<p><a href="https://ibb.co/z2JFkXn"><img src="https://i.ibb.co/2MNSbvn/Captura-de-pantalla-2023-11-10-215826.png" alt="Captura-de-pantalla-2023-11-10-215826" border="0"></a></p>
-
-<p>Front
 <p><a href="https://ibb.co/XYcv4jf"><img src="https://i.ibb.co/Hh5k2BL/Captura-de-pantalla-2023-11-10-215928.png" alt="Captura-de-pantalla-2023-11-10-215928" border="0"></a></p>
 <p><a href="https://ibb.co/jMZ1nrk"><img src="https://i.ibb.co/YkTqHLB/Captura-de-pantalla-2023-11-10-220001.png" alt="Captura-de-pantalla-2023-11-10-220001" border="0"></a></p>
 <p><a href="https://ibb.co/F5gGfZF"><img src="https://i.ibb.co/pfJCsVS/Captura-de-pantalla-2023-11-10-220016.png" alt="Captura-de-pantalla-2023-11-10-220016" border="0"></a></p>
